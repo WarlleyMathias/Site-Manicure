@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+
+<html lang="pt-br" xmlns:th="http://thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security5" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+  layout:decorate="~{layout.html}">
+
+<head>
+	<meta charset="utf-8">
+</head>
+
+<section class="bg-danger bg-gradient text-white col-12" layout:fragment="custom-section">
+<div class="row">
+	<div class="col-xl-7 col-sm-12 mt-4">
+	<h1>Alguns de nossos Trabalhos</h1><br>
+	<h4>
+	Fibra de Vidro<br>
+	Acrigel<br>
+	Banho de Gel
+	</h4>
+	</div>
+<div class="col-xl-5 col-sm-12">
+<div class="card m-4  mx-auto" style="width: 20rem;">
+<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="/imagens/1.jpeg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="/imagens/2.jpeg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="/imagens/3.jpeg" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"  data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"  data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+  </div>
+  </div>
+</div>
+</div>
+</section >
+<section class="bg-light bg-gradient col-12" layout:fragment="custom-section2">
+      <div class="container text-danger">
+        <img class="bd-placeholder-img rounded-circle mt-4" alt="" src="/imagens/lais.png" width="140" height="140" >
+        <h2 >Lais Mathias</h2>
+        <p class="mb-0 pb-2">Profissional e Especialista em Fibra de Vidro</p>
+      </div>
+</section>
+
+</html>

@@ -1,0 +1,5 @@
+.roll {
+  max-height: 300px;
+  overflow: auto;
+  display:inline-block;
+}

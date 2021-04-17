@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+
+<html lang="pt-br" xmlns:th="http://thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security5" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+  layout:decorate="~{layout.html}">
+
+<head>
+	<meta charset="utf-8">
+</head>
+
+<section class="p-5" layout:fragment="custom-section">
+	<div class="container" >
+		<div class="p-3 text-danger">
+			<h1>Marque seu horário conosco!</h1>
+		</div>
+		<a href="/agendar"><button id="agendar" name="agendar" class="btn btn-danger btn-lg">Agendar</button></a>
+	</div>
+</section>
+
+</html>
