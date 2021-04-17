@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+
+<html lang="pt-br" xmlns:th="http://thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security5" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+  layout:decorate="~{layout.html}">
+
+<head>
+	<meta charset="utf-8">
+	<link href="../static/css/agendamento.css" th:href="@{/css/agendamento.css}" rel="stylesheet" />
+</head>
+
+<section class="p-4" layout:fragment="custom-section">
+		<div class="container mb-3 bg-light p-3 rounded-3 p-4 border">
+			<span th:text="${mensagem1}"></span>
+			<div class="m-4 bg-light p-3 rounded-3 border mx-auto">
+			<form action="agendamentos" method="POST">
+			<div class="d-flex m-1 bg-light p-0 rounded-3 border roll ">
+				<table class="table table-bordered">
+				 	<thead>
+				    	<tr>
+				      		<th scope="col">Cliente</th>
+					      	<th scope="col">Dia</th>
+					      	<th scope="col">Horas</th>
+					      	<th scope="col"></th>
+				    	</tr>
+				  	</thead>
+				  	<tbody>
+				    	<tr th:each="a: ${ag}">
+						    <td th:text="${a.cliente}"/>
+						    <td th:text="${a.dia}"/>
+						    <td th:text="${a.horas}"/>
+						    <td><input type="radio" th:value="${a.id}" name="id"></td>
+						</tr>
+				  	</tbody>
+				</table>
+				</div>
+				<button class="btn btn-danger" type="submit">delete</button>
+			</form>
+			</div>
+			<span th:text="${mensagem}"></span>
+	<div class="container justify-content-center d-flex p-5">
+		<div class="mb-3 bg-light p-3 rounded-3 border">
+			<form action="agendamentos2" method="POST">
+				<div class="mb-3">
+					<label class="form-label" for="cliente">Cliente:</label>
+					<input class="form-control" name="cliente" id="cliente" type="text">
+					<label class="form-label" for="dia">Dia:</label>
+					<input class="form-control" name="dia" id="dia" type="date">
+					<label class="form-label" for="horas">Horas:</label>
+					<select class="form-select" name="horas" id="horas">
+						<option>horas</option>
+						<option id="option1" value="9:00">9:00</option>
+						<option id="option2" value="13:00">13:00</option>
+						<option id="option3" value="15:30">15:30</option>
+					</select>
+				</div>
+				<button class="btn btn-danger" type="submit">Agendar</button>
+			</form>
+		</div>
+	</div>
+		</div>
+</section>
+
+</html>
